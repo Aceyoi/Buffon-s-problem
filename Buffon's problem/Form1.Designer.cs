@@ -36,6 +36,7 @@
             listBox1 = new ListBox();
             textBox3 = new TextBox();
             label3 = new Label();
+            label4 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -106,11 +107,21 @@
             label3.TabIndex = 7;
             label3.Text = "Среднее отклонение";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(401, 113);
+            label4.Name = "label4";
+            label4.Size = new Size(316, 15);
+            label4.TabIndex = 8;
+            label4.Text = "3,14159265358979323846264338327950288419716939937510";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(955, 519);
+            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(textBox3);
             Controls.Add(listBox1);
@@ -135,5 +146,6 @@
         private ListBox listBox1;
         private TextBox textBox3;
         private Label label3;
+        private Label label4;
     }
 }

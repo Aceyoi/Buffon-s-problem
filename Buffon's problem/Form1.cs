@@ -1,5 +1,4 @@
-﻿
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Buffon_s_problem
 {
@@ -37,10 +36,9 @@ namespace Buffon_s_problem
                     {
                         sum_p++;
                     }
-                    // Вывод информации о каждой попытке броска
-                    double mpi = (double)N / (sum_p == 0 ? 1 : sum_p); // Оценка числа π (избегаем деления на 0)
+                    double mpi = (double)N / (sum_p == 0 ? 1 : sum_p); // Оценка числа π 
                     double deviation = Math.Abs(mpi - Math.PI); // Отклонение от эталона
-                    listBox1.Items.Add($"В {j + 1} эксперименте на {i + 1} попытке броска получилось число {sum_p} с отклонением: {deviation:F6}");
+                    listBox1.Items.Add($"В {j + 1} эксперименте на {i + 1} попытке броска получилось число {mpi} с отклонением: {deviation:F6}");
                 }
 
                 double finalMpi = (double)N / sum_p; // Оценка числа π
@@ -53,7 +51,6 @@ namespace Buffon_s_problem
                 d += md[j];
             }
             d /= M;
-
             return d;
         }
 
@@ -64,7 +61,12 @@ namespace Buffon_s_problem
 
             double result = buffon_dpi(N, M);
 
-            textBox3.Text = result.ToString(); ;
+            textBox3.Text = result.ToString();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
